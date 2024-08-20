@@ -1,0 +1,15 @@
+@startuml
+'Actors definition
+actor Patient
+
+'Participants declaration
+participant "Hospital Management System" as HMS
+participant "Medical Record DB" as DB
+
+'Patient Activity
+Patient --> HMS: Request medical records
+HMS -> DB: Retrieve medical records
+DB --> HMS: Send medical records
+HMS --> Patient: Display medical records
+@enduml
+

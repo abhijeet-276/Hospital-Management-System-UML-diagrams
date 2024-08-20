@@ -1,0 +1,19 @@
+@startuml
+'Actors definition
+actor Patient
+
+'Participants declaration
+participant "Hospital Management System" as HMS
+participant Doctor
+participant Appointment
+
+'Patient Activity
+Patient --> HMS: Request Appointment
+HMS -> Doctor: Check Availability
+Doctor -> HMS: Availability Status
+HMS -> Appointment: Schedule Appointment
+Appointment -> Patient: Confirm Appointment
+Appointment -> Doctor: Confirm Appointment
+@enduml
+
+

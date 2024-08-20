@@ -1,0 +1,12 @@
+@startuml
+start
+:Patient requests medical report;
+:Check medical report exists;
+if (Is medical report available) then (yes)
+  :Display medical report;
+  :Allow download and print of medical report;
+else (no)
+  :End medical report request;
+endif
+stop
+@enduml

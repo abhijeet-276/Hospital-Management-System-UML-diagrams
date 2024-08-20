@@ -1,0 +1,20 @@
+@startuml
+start
+:Patient request appointment;
+:Check doctor's availability;
+if (Is doctor available) then (yes)
+  :Schedule appointment;
+  :Send confirmation to patient;
+  :Notify doctor of upcoming appointments;
+else (no)
+  :Suggest alternative times;
+  if (Patient accepts alternative?) then (yes)
+    :Schedule appointment;
+    :Send confirmation to patient;
+    :Notify doctor of upcoming appointments;
+  else (no)
+    :End appointment request;
+  endif
+endif
+stop
+@enduml

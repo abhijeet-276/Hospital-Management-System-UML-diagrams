@@ -1,0 +1,30 @@
+@startuml
+left to right direction
+actor Doctor
+actor HMS
+actor Patient
+rectangle "Hospital Management System" {
+  usecase "Register Patient" as UC1
+  usecase "Prescribe Medicine" as UC2
+  usecase "Scehdule Appointment" as UC3
+  usecase "Cancel Appointment" as UC4
+  usecase "Reschedule Appointment" as UC5
+  usecase "Update medical record" as UC6
+  usecase "Add medical record" as UC7
+  usecase "View medical record" as UC8
+}
+Patient --> UC1
+Patient --> UC3
+Patient --> UC4
+Patient --> UC5
+Patient --> UC8
+
+Doctor --> UC2
+Doctor --> UC4
+Doctor --> UC6
+Doctor --> UC7
+Doctor --> UC8
+
+HMS --> UC1
+HMS --> UC8
+@enduml
