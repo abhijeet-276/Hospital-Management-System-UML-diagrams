@@ -18,6 +18,7 @@ class Doctor {
   - contact: String
   + diagnosePatient() 
   + prescribeMedicine()
+  + addMedicalRecord(medId: int, diagnosis: String, prescription: String)
   + viewMedicalRecord(patientId: int)
   + updateMedicalRecord(medId: int, diagnosis: String, prescription: String)
 }
@@ -42,7 +43,7 @@ class Patient {
   - contact: String
   - diagnosis: String
   + bookAppointmnet()  
-  + viewMedicalRecord()
+  + viewMedicalRecord(patientId: int)
 }
 
 class Appointment {
